@@ -35,14 +35,14 @@ $vision_button_text             = get_field('vision_button_text', $post->ID);
 $vision_button_url              = get_field('vision_button_url', $post->ID);
 
 get_header(); ?>
-    
+
     <div class="container">
         <div class="row">
-            
+
             <div id="primary" class="content-area col-md-8">
 				<main id="main" class="site-main" role="main">
-                    
-                    <?php 
+
+                    <?php
                     // Breadcrumb
                     if ( function_exists( 'yoast_breadcrumb' ) ) {
                         yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
@@ -54,7 +54,7 @@ get_header(); ?>
                             <?php dynamic_sidebar( 'front-1' ); ?>
                         </section>
                     <?php endif; ?>
-                    
+
                     <!-- second-home-widget-area -->
                     <section class="second-home-widget-area">
                         <article class="welcome">
@@ -63,8 +63,15 @@ get_header(); ?>
                             </header>
                             <p><?php echo $welcome_section_body_text ?></p>
                         </article>
-		    		</section>
-                   
+                    </section>
+
+                    <!-- fourth-home-widget-area -->
+                    <?php if( is_active_sidebar( 'front-4' ) ) : ?>
+                        <section class="fourth-home-widget-area">
+                            <?php dynamic_sidebar( 'front-4' ); ?>
+                        </section> <!-- end of #featured-article -->
+                    <?php endif; ?>
+
                     <!-- third-home-widget-area -->
                     <section class="third-home-widget-area row">
                         <article class="section-one col-sm-4">
@@ -82,12 +89,12 @@ get_header(); ?>
                                     <header>
                                         <h2><?php echo $focus_title; ?></h2>
                                     </header>
-                                    <p class="focus-scope"><?php echo $focus_message; ?></p>	    									
+                                    <p class="focus-scope"><?php echo $focus_message; ?></p>
                                     <p><a href="<?php echo $focus_button_url; ?>" class="btn btn-primary intro-read-more" ><?php echo $focus_button_text; ?> <i class="fa fa-angle-double-right"></i></a></p>
                                 </div>
                             </div>
                         </article> <!-- end .focus-scope -->
-                        
+
                         <article class="section-two col-sm-4">
                             <div class="section">
                                 <?php if( !empty($mission_icon) ) { ?>
@@ -107,7 +114,8 @@ get_header(); ?>
                                     <p><a href="<?php echo $mission_button_url; ?>" class="btn btn-primary intro-read-more" ><?php echo $mission_button_text; ?> <i class="fa fa-angle-double-right"></i></a></p>
                                 </div>
                             </div>
-                        </article>
+                        </article> <!-- end .mission -->
+
                         <article class="section-three col-sm-4">
                             <div class="section">
                                  <?php if( !empty($vision_icon) ) { ?>
@@ -127,23 +135,16 @@ get_header(); ?>
                                     <p><a href="<?php echo $vision_button_url; ?>" class="btn btn-primary intro-read-more"><?php echo $vision_button_text; ?> <i class="fa fa-angle-double-right"></i></a></p>
                                 </div>
                             </div>
-                        </article>
+                        </article> <!-- end .vision -->
                     </section>
-                    
-                    <!-- fourth-home-widget-area -->
-                    <?php if( is_active_sidebar( 'front-4' ) ) : ?>
-                        <section class="fourth-home-widget-area">
-                            <?php dynamic_sidebar( 'front-4' ); ?>
-                        </section> <!-- end of #featured-article -->
-                    <?php endif; ?>
 
                     <!-- Advertisement -->
                     <?php empress_lite_get_below_ad(); ?>
-                    
+
         		</main> <!-- end of #main -->
         	</div> <!-- end of #primary -->
 
             <?php get_sidebar(); ?>
-        </div> <!-- end of .row --> 
+        </div> <!-- end of .row -->
     </div> <!-- end of .container -->
 <?php get_footer(); ?>

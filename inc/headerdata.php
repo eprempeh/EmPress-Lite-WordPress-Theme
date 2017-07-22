@@ -12,18 +12,18 @@
 /*-----------------------------------------------------------------------------------*/
 
 if ( ! function_exists( 'empress_lite_css_include' ) ) {
-	
+
 	function empress_lite_css_include () {
 
 		/*-----------------------------------------------------------
 			Loads our main stylesheet.
 		-----------------------------------------------------------*/
-		wp_enqueue_style( 'empress-lite-style', get_stylesheet_uri(), array( 'bootstrap', 'font-awesome', 'empress-lite-google-fonts' ), '20151115' );
+		wp_enqueue_style( 'empress-lite-style', get_stylesheet_uri(), array( 'bootstrap', 'font-awesome', 'empress-lite-google-fonts' ), '20172207' );
 
 
 		/*-----------------------------------------------------------
 			Bootstrap
-		-----------------------------------------------------------*/		
+		-----------------------------------------------------------*/
 		wp_register_style( 'bootstrap', get_template_directory_uri().'/css/bootstrap.min.css', array(), '3.3.5' );
 		wp_enqueue_style( 'bootstrap' );
 
@@ -42,7 +42,7 @@ if ( ! function_exists( 'empress_lite_css_include' ) ) {
 		wp_enqueue_style( 'empress-lite-google-fonts' );
 
 	}
-	
+
 	add_action( 'wp_enqueue_scripts', 'empress_lite_css_include' );
 }
 
@@ -51,7 +51,7 @@ if ( ! function_exists( 'empress_lite_css_include' ) ) {
 /*	Include JavaScripts
 / /*-----------------------------------------------------------------------------------*/
 if ( ! function_exists( 'empress_lite_scripts_include' ) ) {
-	
+
 	function empress_lite_scripts_include() {
 
 		/*-----------------------------------------------------------
@@ -70,7 +70,7 @@ if ( ! function_exists( 'empress_lite_scripts_include' ) ) {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
-		
+
 		/*-----------------------------------------------------------
 	    	Bootstrap Script
 	    -----------------------------------------------------------*/
@@ -85,9 +85,9 @@ if ( ! function_exists( 'empress_lite_scripts_include' ) ) {
 			This part loads a JavaScript file that enables old versions of Internet Explorer to recognize the new HTML5 element
 		-----------------------------------------------------------*/
 		global $is_IE;
-		if ($is_IE) { 
+		if ($is_IE) {
 			wp_enqueue_script( 'html5', 'http://html5shim.googlecode.com/svn/trunk/html5.js', '', '', '' );
-		} 
+		}
 
 	}
 
@@ -111,14 +111,14 @@ global $is_IE;
 $empress_lite_user_agent = $_SERVER['HTTP_USER_AGENT'];
 
 if ( $is_IE && preg_match('/(?i)msie [1-8]/', $empress_lite_user_agent) ) {
-	
+
 	function empress_lite_ie_version() {
 		wp_enqueue_script( 'html5shiv', 'http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js', '', '',  true );
 		wp_enqueue_script( 'respondjs', 'http://oss.maxcdn.com/respond/1.4.2/respond.min.js', '', '', true );
 	}
 
 add_action( 'wp_enqueue_scripts', 'empress_lite_ie_version' );
-	
+
 }
 
 ?>

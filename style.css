@@ -337,7 +337,7 @@ h6{
 }
 p{
 	font-size: 0.9em;
-	margin: 0 0 15px; 
+	margin: 0 0 15px;
 }
 img{
 	max-width: 100%;
@@ -627,7 +627,7 @@ table > tfoot > tr > td {
 .navbar-default .navbar-nav > .open > a:focus,
 .navbar-default .navbar-nav > .open > a:hover{
 	background-color: #1A6D9E;
-	color: #fff;	
+	color: #fff;
 }
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:focus,
@@ -649,7 +649,7 @@ table > tfoot > tr > td {
 }
 .site-branding .site-description{
  	margin-bottom: 0;
- 	font-size: 12px;		
+ 	font-size: 12px;
 }
 .site-branding h1.site-logo,
 .site-branding p.site-logo{
@@ -680,7 +680,7 @@ table > tfoot > tr > td {
 }
 #primary,
 #secondary{
-	margin-bottom: 48px;
+	margin-bottom: 28px;
 }
 #primary .first-home-widget-area,
 #primary .second-home-widget-area,
@@ -704,7 +704,7 @@ table > tfoot > tr > td {
 }
 /* == Begin Welcome Section */
 #primary .second-home-widget-area{
-	text-align: center;
+	font-size: 18px;
 }
 /* == Begin Focus, Mission  and Vision Section */
 #primary .third-home-widget-area{
@@ -754,7 +754,7 @@ table > tfoot > tr > td {
 }
 #primary .fourth-home-widget-area article.home-post{
 	margin-bottom: 20px;
-	padding-bottom: 15px;	
+	padding-bottom: 15px;
 	border-bottom: 1px solid #dedede;
 }
 /* Main Entry*/
@@ -764,7 +764,7 @@ article.post .entry-header{
 }
 article.post .entry-footer{
 	padding-top: 5px;
-	border-top: 1px solid #f1f1f1;	
+	border-top: 1px solid #f1f1f1;
 }
 .entry-header .entry-title,
 .page-title /* Title for Search Page */ {
@@ -864,7 +864,7 @@ article.page .entry-title{
     overflow: hidden;
 }
 #primary #contact-us #map-location{
-    
+
 }
 #primary #contact-us .google-map {
     height: 350px;
@@ -964,7 +964,7 @@ aside.widget span.post-date{
 }
 .widget_pages li::before{
 	content: '\f016';
-	margin-right: 8px;	
+	margin-right: 8px;
 }
 .widget_recent_comments li::before{
 	content: '\f0e5';
@@ -1091,7 +1091,7 @@ aside.widget span.post-date{
 #footer-social-tool .empress_lite_social a.social:hover{
 	color: #fff;
 	-webkit-transition: background-color 0.3s ease-out;
-	transition: background-color 0.3s ease-out;    
+	transition: background-color 0.3s ease-out;
 }
 #footer-social-tool .empress_lite_social a[href*="facebook.com"]:hover{
 	background-color: #3b5998;
@@ -1124,7 +1124,7 @@ aside.widget span.post-date{
 	}
 }
 @media (min-width: 560px){
-	
+
 }
 @media (min-width: 768px){
 	h1{
@@ -1180,7 +1180,7 @@ aside.widget span.post-date{
 	#header-search-form aside input[type="submit"],
 	#header-search-form aside .form-control{
 		display: inline-block;
-	}	
+	}
 	#header-social-tool,
 	#header-search-form {
 		width: 100%;
@@ -1235,7 +1235,7 @@ aside.widget span.post-date{
 		border: 1px solid #dedede;
 		-o-box-shadow: 0px 0px 2px #ccc;
 		box-shadow: 0px 0px 2px #ccc;
-	}		
+	}
 	#breadcrumb{
 		margin-bottom: 15px;
 	}
@@ -1338,7 +1338,7 @@ aside.widget span.post-date{
     #header-social-tool .empress_lite_social a[href*="linkedin.com"]:hover,
     #header-social-tool .empress_lite_social a[href*="mailto"]:hover{
         -webkit-transition: background-color 0.3s all ease-in;
-        transition: background-color 0.3s all ease-in;        
+        transition: background-color 0.3s all ease-in;
     }
 	#header-social-tool,
 	#header-search-form {
@@ -1353,7 +1353,7 @@ aside.widget span.post-date{
 		text-align: right;
 		margin-bottom: 10px;
 	}
-    /* CONTACT PAGE */    
+    /* CONTACT PAGE */
     #primary .col-md-6.name{
         margin-bottom: 0;
     }
